@@ -40,6 +40,7 @@ void Character::tick(float deltaTime)
     Vector2 origin{};
     Vector2 offset{};
     float rotation{};
+    
     if(rightLeft > 0.f)
     {
         origin = {0.2f, weapon.height * scale};
@@ -70,13 +71,15 @@ void Character::tick(float deltaTime)
     Rectangle dest{getScreenPos().x + offset.x, getScreenPos().y + offset.y, weapon.width * scale, weapon.height * scale};
     DrawTexturePro(weapon, source, dest, origin, rotation, WHITE);
 
-    DrawRectangleLines(
-        weaponCollisionRec.x,
-        weaponCollisionRec.y,
-        weaponCollisionRec.width,
-        weaponCollisionRec.height,
-        RED
-    );   
+    //Code to draw the sword bounds
+
+    // DrawRectangleLines(
+    //     weaponCollisionRec.x,
+    //     weaponCollisionRec.y,
+    //     weaponCollisionRec.width,
+    //     weaponCollisionRec.height,
+    //     RED
+    // );   
 }
 
 void Character::takeDamage(float damage)
