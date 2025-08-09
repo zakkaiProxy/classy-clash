@@ -9,29 +9,29 @@ int main()
 {
     const int windowWidth{384};
     const int windowHeight{384};
-    InitWindow(windowWidth, windowHeight, "Zacks dungeons");
+    InitWindow(windowWidth, windowHeight, "Dungeons");
 
-    Texture2D map = LoadTexture("/home/zakku/classy-clash/Classy+Clash+Sprites/nature_tileset/OpenWorldMap24x24.png");
+    Texture2D map = LoadTexture("/classy-clash/Classy+Clash+Sprites/nature_tileset/OpenWorldMap24x24.png");
     Vector2 mapPos{0.0, 0.0};
     const float mapScale{4.0f};
 
     Character knight{windowWidth, windowHeight};
 
     Prop props[2]{
-        Prop{Vector2{600.f, 300.f}, LoadTexture("nature_tileset/Rock.png")},
-        Prop{Vector2{400.f, 500.f}, LoadTexture("nature_tileset/Log.png")}
+        Prop{Vector2{600.f, 300.f}, LoadTexture("/classy-clash/Classy+Clash+Sprites/nature_tileset/Rock.png")},
+        Prop{Vector2{400.f, 500.f}, LoadTexture("/classy-clash/Classy+Clash+Sprites/nature_tileset/Log.png")}
 
     };
 
     Enemy goblin{
         Vector2{800.f, 300.f},
-        LoadTexture("/home/zakku/classy-clash/characters/goblin_idle_spritesheet.png"),
-        LoadTexture("/home/zakku/classy-clash/characters/goblin_run_spritesheet.png")};
+        LoadTexture("/classy-clash/characters/goblin_idle_spritesheet.png"),
+        LoadTexture("/classy-clash/characters/goblin_run_spritesheet.png")};
 
     Enemy slime{
         Vector2{500.f, 700.f},
-        LoadTexture("/home/zakku/classy-clash/characters/slime_idle_spritesheet.png"),
-        LoadTexture("/home/zakku/classy-clash/characters/slime_run_spritesheet.png"),
+        LoadTexture("/classy-clash/characters/slime_idle_spritesheet.png"),
+        LoadTexture("/classy-clash/characters/slime_run_spritesheet.png"),
 
     };
 
